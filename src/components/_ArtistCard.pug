@@ -1,0 +1,18 @@
+mixin ArtistCard(options)
+    -
+        const props = Object.assign({
+            name:'',
+            img: '',
+            size: '', 
+            direction: '', 
+            link: '##'
+            }, options);
+
+        const classes = [
+            props.size ? `--size-${props.size}` : '',
+            props.direction ? `--${props.direction}` : '',
+        ];
+    article.c-artist-card(class=classes.join(' '))
+        a.c-artist-card__link(href=props.link)
+            .c-artist-card__img-mask
+                img.u-obejct-fit.u-w-full(src=props.img,alt=`${props.name}逃離塔科夫`)

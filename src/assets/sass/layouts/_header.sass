@@ -1,0 +1,115 @@
+.l-header
+    position: sticky
+    position: -webkit-sticky
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1vw 4vw 1vw 4vw 
+    z-index: 99
+    left: 0
+    top: 0
+    background: linear-gradient(to right,var(--color-primary),var(--color-linear))
+    &__img-mask
+        flex-shrink:0 
+        width: 23rem
+    &__burger
+        display: none
+    +media(xl)
+        padding: var(--spacing-16)4vw
+        &__burger
+            display: block
+
+.c-nav
+    &__menu
+        display: flex
+    &__btn-box
+        display: flex
+    &__btn-box.--icon &__btn
+        display: flex
+        align-items: center
+        height: 100%
+        padding: var(--spacing-16) 1.2vw
+        // background-color: var(--color-secondary)
+        // color: var(--color-black)
+        &::before,&::after
+            --gradient-color: var(--color-secondary)
+    &__btn-box.--menu &__btn-wrap
+        align-items: center
+
+
+    &__btn
+        padding: var(--spacing-24) 1vw
+        line-height: 1.2
+        color: var(--color-black)
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        background-image: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary))
+        transform: background-color 0.3s
+        &:hover
+            background-image: linear-gradient(to bottom, var(--color-secondary) 80%, transparent)
+        // transform: color 0.3s
+        // &:hover
+        //     color:var(--color-primary)
+        //     &::before
+        //         opacity: 1
+        // &::before, &::after
+        //     --gradient-color:var(--color-primary)
+        //     content: ''
+        //     display: block
+        //     position: absolute
+        //     left: 0
+        //     top: 0
+        //     background-image: linear-gradient(to bottom, var(--color-secondary),transparent)
+        // &::before
+        //     +size(100%)
+        //     opacity: 0
+        //     transform: opacity 0.3s
+        // &::after
+        //     --gradient-color: var(--color-gray-light)
+        //     +size(1px, 100%)
+
+    +media(xxl)
+        &__btn
+            padding-left: 2.6vw
+            padding-right: 2.6vw
+    +media(xl)
+        position: fixed
+        left:0
+        top:0
+        +size(100%)
+        opacity: 0
+        pointer-events: none
+        transform: opacity 0.5s
+        &.is-opened
+            opacity: 1
+            pointer-events: auto
+            overflow: auto
+        &__menu
+            // display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            width: 100%
+            min-height: 100%
+            padding: var(--spacing-40)
+            background-color: var(--color-secondary)
+        &__btn-box.--icon &__btn
+            background-color: transparent
+            &::after
+               display: none
+        &__btn-wrap:fiest-child &__btn::after
+            display: none 
+    +media(sm)
+        &__btn-box:not(.--icon)
+            flex-direction: column
+            align-items: center
+        &__btn
+            text-align: center
+            &::after
+                display: none
+#nav-switcher:checked ~ .c-nav
+  opacity: 1
+  pointer-events: auto
+  overflow: auto

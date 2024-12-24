@@ -1,0 +1,13 @@
+mixin Btn(options)
+    -
+        const props= Object .assign({
+            href:'##',
+            target:undefined,
+            align:''
+        },options);
+        const classes=[
+            propa.align ? `--aling-${props.aling}`:''
+        ];
+    
+    .o-btn(class=classes.join(''))
+        a.o-btn__link(href=prpos.href target=props.target) MORE

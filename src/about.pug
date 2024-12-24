@@ -1,0 +1,145 @@
+include components/_ArtistCard.pug
+doctype html
+html(lang="en")
+  head
+    include layouts/_Settings.pug
+    include layouts/_Head.pug
+  body 
+    include layouts/_Header.pug
+    main.l-main
+      .l-hero
+        .swiper.l-hero__swiper
+          .swiper-wrapper
+            .swiper-slide 
+              .l-hero__img-mask
+                img.u-object-fit(src="img/banner/banner-img01.jpg", alt="逃離塔科夫")
+            .swiper-slide
+              .l-hero__img-mask
+                img.u-object-fit(src="img/banner/banner-img02.jpg", alt="逃離塔科夫")
+            .swiper-slide
+              .l-hero__img-mask
+                img.u-object-fit(src="img/banner/banner-img03.jpg", alt="逃離塔科夫")
+      
+        //- carouselExampleSlidesOnly.carousel.slide(data-bs-ride="carousel")
+          .carousel-inner
+            .carousel-item.active
+              img.d-block.w-100(src="img/banner/banner-img01.jpg", alt="逃離塔科夫")
+            .carousel-item
+              img.d-block.w-100(src="img/banner/banner-img02.jpg", alt="逃離塔科夫")
+            .carousel-item
+             img.d-block.w-100(src="img/banner/banner-img03.jpg", alt="逃離塔科夫")
+      
+      section.l-news 
+        .container
+          .row
+            .col-md-6.c-box
+              .c-box__block.-game
+                a.u-text-3xl.u-fw-900 最新消息
+                  span.u-text-2xl 內文內文內文內文內文 
+            .col-md-6.c-box
+              .c-box__block.-community
+                a.u-text-3xl.u-fw-900 社群消息
+                  span.u-text-2xl 內文內文內文內文內文 
+          .l-box__block.-img
+            .c-block__img-mask
+              img(src="img/news/news.jpg")
+
+      section.l-introduce
+        .container
+          .row 
+            .col-md-4.c-crd
+              .c-card.-BEAR
+                .c-card__header
+                  .c-card__img-mask 
+                    img(src="img/introduce/bear01.jpg",alt="BEAR")
+                  .c-card__titlr-warp
+                    h3.u-text-3xl.u-fw-900 陣營介紹
+                    span.u-text-2xl 內文內文內文內文
+            .col-md-4.c-crd
+              .c-card.-USEC
+                .c-card__header
+                  .c-card__img-mask 
+                    img(src="img/introduce/usec01.jpg",alt="USEC")
+                  .c-card__titlr-warp
+                    h3.u-text-3xl.u-fw-900 陣營介紹
+                    span.u-text-2xl 內文內文內文內文
+            .col-md-4.c-crd
+              .c-card.-SCAV
+                .c-card__header
+                  .c-card__img-mask 
+                    img(src="img/introduce/scav01.jpg",alt="SCAV")
+                  .c-card__titlr-warp
+                    h3.u-text-3xl.u-fw-900 陣營介紹
+                    span.u-text-2xl 內文內文內文內文
+
+      section.u-px-0.l-gallery 
+        .container 
+          h2.o-section-title
+          .row.--gap
+            .col-xl-4.col-md-6.l-gallery__wrap
+              +ArtistCard({
+                img:'img/gallery/gallery01.jpg',
+                link:'news.html'
+              })
+              //- article.c-artist-card 
+              //-   a.c-artist-card__link(href="##")
+              //-     .c-artist-card__img-mask
+              //-       img.u-object-fit.--abs(src="img/gallery/gallery01.jpg",alt="逃離塔科夫")
+            .col-xl-4.col-md-6.l-gallery__wrap
+              article.c-artist-card 
+                a.c-artist-card__link(href="##")
+                  .u-img-ratio.c-artist-card__img-mask
+                    img.u-object-fit.u-w-full(src="img/gallery/gallery02.jpg",alt="逃離塔科夫")
+            .col-xl-4.col-md-6.l-gallery__wrap
+              article.c-artist-card 
+                a.c-artist-card__link(href="##")
+                  .u-img-ratio.c-artist-card__img-mask
+                    img.u-object-fit.u-w-full(src="img/gallery/gallery03.jpg",alt="逃離塔科夫")
+            .col-xl-4.col-md-6.l-gallery__wrap
+              article.c-artist-card 
+                a.c-artist-card__link(href="##")
+                  .u-img-ratio.c-artist-card__img-mask
+                    img.u-object-fit.u-w-full(src="img/gallery/gallery04.jpg",alt="逃離塔科夫")
+            .col-xl-4.col-md-6.l-gallery__wrap
+              article.c-artist-card 
+                a.c-artist-card__link(href="##")
+                  .u-img-ratio.c-artist-card__img-mask
+                    img.u-object-fit.u-w-full(src="img/gallery/gallery05.jpg",alt="逃離塔科夫")
+            .col-xl-4.col-md-6.l-gallery__wrap
+              article.c-artist-card 
+                a.c-artist-card__link(href="##")
+                  .u-img-ratio.c-artist-card__img-mask
+                    img.u-object-fit.u-w-full(src="img/gallery/gallery06.jpg",alt="逃離塔科夫")
+      section.l-product
+        .container
+          .l-project
+            article.c-bedition
+              a.c-bedition__link(href="#shopping_cart_escape.pug#")
+                .c-bedition__img-mask
+                  img(src="img/product/preorder_prepare_for_escape 1.jpg", alt="")
+            article.c-wedition
+              a.c-bedition__link(href="#shopping_cart_standard.pug#")
+                .c-Wedition__img-mask
+                  img(src="img/product/preorder_standard 1.jpg", alt="")
+      section.l-login
+        .container
+          .l-outer
+            .l-post
+              h3.u-text-3xl.u-fw-900 註冊帳號
+              //- .c-form__form__field-wrap
+              //-   .label(for="email")電子信箱
+    include layouts/_Footer.pug
+    include layouts/_Scripts.pug
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous") 
+    script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")    
+    script. 
+      const swiper = new Swiper ('.l-hero__swiper',{
+        effect:'fade',
+        longSwipesRatio: 0.1,
+        loop: true,
+        speed: 1200,
+        autoplay:{
+          delay:3000,
+          disableOnInteraction: false
+        }
+      });

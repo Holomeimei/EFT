@@ -1,0 +1,44 @@
+header.l-header 
+  a.l-header__img-mask(href="about.html")
+    img(src="img/logo/img.png", alt="塔科夫logo")
+
+  input#nav-switcher(type="checkbox" hidden)
+  
+  lable.o-burger.l-header__burger(for="nav-switcher")
+    .o-burger__warp
+      .o-burger__line
+      .o-burger__line
+      .o-burger__line
+
+  nav.c-nav.is-oprned 
+    .c-nav__menu
+      ul.c-nav__btn-box.--menu
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="about.html")
+            span.u-fw-900 首頁
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="news.html")
+            span.u-fw-900 最新消息
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="introduce.html")
+            span.u-fw-900 遊戲介紹
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="gallery.html")
+            span.u-fw-900 畫廊
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="product.html")
+            span.u-fw-900 產品
+        li.c-nav__btn-wrap 
+          a.c-nav__btn(href="login.html")
+            span.u-fw-900 登入/註冊
+
+      ul.c-nav__btn-box.--icon
+        li.c-nav__btn-wrap
+          a.c-nav__btn(href="##" target="_blank")
+            iconify-icon.u-icon-md(icon="mdi:instagram")
+        li.c-nav__btn-wrap  
+          a.c-nav__btn(href="##" target="_blank")
+            iconify-icon.u-icon-md(icon="mingcute:youtube-fill")
+        li.c-nav__btn-wrap  
+          a.c-nav__btn(href="##" target="_blank")
+            iconify-icon.u-icon-md(icon="pajamas:twitter")
